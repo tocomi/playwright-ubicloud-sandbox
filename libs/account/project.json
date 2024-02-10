@@ -4,5 +4,7 @@
   "sourceRoot": "libs/account/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "component-test": {}
+  }
 }

@@ -4,5 +4,7 @@
   "sourceRoot": "libs/shared/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "component-test": {}
+  }
 }
