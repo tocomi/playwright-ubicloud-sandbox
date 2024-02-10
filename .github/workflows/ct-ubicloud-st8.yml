@@ -1,0 +1,27 @@
+name: Component Test with ubicloud-standard-8
+on:
+  push:
+    branches: [main, master]
+jobs:
+  run-component-tests:
+    runs-on: ubicloud-standard-8
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: yarn
+      - name: Install dependencies
+        run: yarn
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: yarn component-test
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 1
