@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@playwright-ubicloud-sandbox/account": ["libs/account/src/index.ts"],
       "@playwright-ubicloud-sandbox/shared": ["libs/shared/src/index.ts"]
     }
   },
