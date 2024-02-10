@@ -1,3 +1,4 @@
+import { NxWelcome } from '@playwright-ubicloud-sandbox/shared'
 import styled from 'styled-components'
 
 const StyledApp = styled.div`
@@ -7,7 +8,7 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <h1>Welcome</h1>
+      <NxWelcome title="playwright" />
     </StyledApp>
   )
 }

@@ -28,6 +28,7 @@
     "@nx/web": "18.0.4",
     "@nx/webpack": "18.0.4",
     "@nx/workspace": "18.0.4",
+    "@playwright/experimental-ct-react": "^1.41.2",
     "@playwright/test": "^1.36.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@svgr/webpack": "^8.0.1",
