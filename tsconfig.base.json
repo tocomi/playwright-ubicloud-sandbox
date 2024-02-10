@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@playwright-ubicloud-sandbox/account": ["libs/account/src/index.ts"],
-      "@playwright-ubicloud-sandbox/shared": ["libs/shared/src/index.ts"]
+      "@playwright-ubicloud-sandbox/admin": ["libs/admin/src/index.ts"],
+      "@playwright-ubicloud-sandbox/book": ["libs/book/src/index.ts"],
+      "@playwright-ubicloud-sandbox/shared": ["libs/shared/src/index.ts"],
+      "@playwright-ubicloud-sandbox/shop": ["libs/shop/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

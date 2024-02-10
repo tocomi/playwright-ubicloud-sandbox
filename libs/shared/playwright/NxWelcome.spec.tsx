@@ -18,16 +18,16 @@ const toggleTitle = async (
 const inputValue = async (
   page: Parameters<Parameters<typeof test>[1]>[0]['page'],
 ) => {
-  await page.getByRole('textbox').fill('0123456789'.repeat(100))
-  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
-  await page.getByRole('textbox').fill('0123456789'.repeat(100))
-  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
-  await page.getByRole('textbox').fill('0123456789'.repeat(100))
-  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
-  await page.getByRole('textbox').fill('0123456789'.repeat(100))
-  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
-  await page.getByRole('textbox').fill('0123456789'.repeat(100))
-  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
+  for (let i = 0; i < 10; i++) {
+    await page.getByRole('textbox').fill('0123456789'.repeat(100))
+    await expect(page.getByRole('textbox')).toHaveValue(
+      '0123456789'.repeat(100),
+    )
+    await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
+    await expect(page.getByRole('textbox')).toHaveValue(
+      'abcdefghij'.repeat(100),
+    )
+  }
 }
 
 test('testA 001', async ({ mount, page }) => {
