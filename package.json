@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve playwright-ubicloud-sandbox"
+    "start": "nx serve playwright-ubicloud-sandbox",
+    "component-test": "nx run-many -t component-test -p account shared"
   },
   "private": true,
   "dependencies": {

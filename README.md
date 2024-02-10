@@ -8,5 +8,5 @@ Nx と Playwright Component Test を Ubicloud 上で実行した時に、通常�
 yarn
 
 # ローカルでのテスト実行
-yarn nx run-many -t component-test -p account shared
+yarn component-test
 ```
