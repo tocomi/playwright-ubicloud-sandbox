@@ -1,8 +1,0 @@
-{
-  "name": "playwright-ubicloud-sandbox-e2e",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "application",
-  "sourceRoot": "apps/playwright-ubicloud-sandbox-e2e/src",
-  "targets": {},
-  "implicitDependencies": ["playwright-ubicloud-sandbox"]
-}
