@@ -1,17 +1,15 @@
-import styled from 'styled-components';
-
-import NxWelcome from './nx-welcome';
+import styled from 'styled-components'
 
 const StyledApp = styled.div`
   // Your style here
-`;
+`
 
 export function App() {
   return (
     <StyledApp>
-      <NxWelcome title="playwright-ubicloud-sandbox" />
+      <h1>Welcome</h1>
     </StyledApp>
-  );
+  )
 }
 
-export default App;
+export default App
