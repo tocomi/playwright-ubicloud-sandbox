@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve playwright-ubicloud-sandbox",
-    "component-test": "nx run-many -t component-test -p account admin book shared shop"
+    "component-test": "nx run-many -t component-test -p account admin book shared shop --parallel=5"
   },
   "private": true,
   "dependencies": {
