@@ -10,6 +10,7 @@ import { css } from 'styled-components'
  */
 export function NxWelcome({ title }: { title: string }) {
   const [displayTitle, setDisplayTitle] = useState(true)
+  const [inputValue, setInputValue] = useState('')
 
   const toggleDisplayTitle = () => {
     // NOTE: テストを長引かせるためにわざと遅延させている
@@ -35,6 +36,14 @@ export function NxWelcome({ title }: { title: string }) {
           >
             toggle title
           </button>
+
+          <input
+            type="text"
+            name="textInput"
+            className="input"
+            value={inputValue}
+            onChange={(event) => setInputValue(event.target.value)}
+          />
 
           <div id="hero" className="rounded">
             <div className="text-container">
@@ -619,6 +628,18 @@ const Style = () => {
             width: 100%;
             cursor: pointer;
           }
+          .input {
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 0.375rem;
+            border: 1px solid rgba(229, 231, 235, 1);
+            color: rgba(55, 65, 81, 1);
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 1rem;
+            padding: 1rem;
+            width: 100%;
+          }
           #welcome {
             margin-top: 2.5rem;
           }
@@ -955,5 +976,3 @@ const Style = () => {
     />
   )
 }
-
-export default NxWelcome

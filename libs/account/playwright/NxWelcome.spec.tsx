@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/experimental-ct-react'
 import { NxWelcome } from '../src'
 
-const routine = async (
+const toggleTitle = async (
   page: Parameters<Parameters<typeof test>[1]>[0]['page'],
 ) => {
   await page.getByRole('button', { name: 'toggle title' }).click()
@@ -15,37 +15,57 @@ const routine = async (
   ).toBeVisible()
 }
 
-test('testB 001', async ({ mount, page }) => {
+const inputValue = async (
+  page: Parameters<Parameters<typeof test>[1]>[0]['page'],
+) => {
+  await page.getByRole('textbox').fill('0123456789'.repeat(100))
+  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
+  await page.getByRole('textbox').fill('0123456789'.repeat(100))
+  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
+  await page.getByRole('textbox').fill('0123456789'.repeat(100))
+  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
+  await page.getByRole('textbox').fill('0123456789'.repeat(100))
+  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
+  await page.getByRole('textbox').fill('0123456789'.repeat(100))
+  await page.getByRole('textbox').fill('abcdefghij'.repeat(100))
+}
+
+test('testA 001', async ({ mount, page }) => {
   const component = await mount(<NxWelcome title="playwright ct" />)
   await expect(component).toContainText('playwright ct')
 
-  await routine(page)
+  await toggleTitle(page)
+  await inputValue(page)
 })
 
-test('testB 002', async ({ mount, page }) => {
+test('testA 002', async ({ mount, page }) => {
   const component = await mount(<NxWelcome title="playwright ct" />)
   await expect(component).toContainText('playwright ct')
 
-  await routine(page)
+  await toggleTitle(page)
+  await inputValue(page)
 })
 
-test('testB 003', async ({ mount, page }) => {
+test('testA 003', async ({ mount, page }) => {
   const component = await mount(<NxWelcome title="playwright ct" />)
   await expect(component).toContainText('playwright ct')
 
-  await routine(page)
+  await toggleTitle(page)
+  await inputValue(page)
 })
 
-test('testB 004', async ({ mount, page }) => {
+test('testA 004', async ({ mount, page }) => {
   const component = await mount(<NxWelcome title="playwright ct" />)
   await expect(component).toContainText('playwright ct')
 
-  await routine(page)
+  await toggleTitle(page)
+  await inputValue(page)
 })
 
-test('testB 005', async ({ mount, page }) => {
+test('testA 005', async ({ mount, page }) => {
   const component = await mount(<NxWelcome title="playwright ct" />)
   await expect(component).toContainText('playwright ct')
 
-  await routine(page)
+  await toggleTitle(page)
+  await inputValue(page)
 })
