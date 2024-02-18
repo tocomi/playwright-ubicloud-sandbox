@@ -1,0 +1,10 @@
+{
+  "name": "long-task-02",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/long-task-02/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "component-test": {}
+  }
+}

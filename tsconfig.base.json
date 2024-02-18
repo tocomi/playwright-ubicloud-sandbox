@@ -21,6 +21,18 @@
       "@playwright-ubicloud-sandbox/long-task-01": [
         "libs/long-task-01/src/index.ts"
       ],
+      "@playwright-ubicloud-sandbox/long-task-02": [
+        "libs/long-task-02/src/index.ts"
+      ],
+      "@playwright-ubicloud-sandbox/long-task-03": [
+        "libs/long-task-03/src/index.ts"
+      ],
+      "@playwright-ubicloud-sandbox/long-task-04": [
+        "libs/long-task-04/src/index.ts"
+      ],
+      "@playwright-ubicloud-sandbox/long-task-05": [
+        "libs/long-task-05/src/index.ts"
+      ],
       "@playwright-ubicloud-sandbox/shared": ["libs/shared/src/index.ts"],
       "@playwright-ubicloud-sandbox/shop": ["libs/shop/src/index.ts"]
     }
