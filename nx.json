@@ -18,7 +18,7 @@
     "component-test": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "playwright test -c playwright-ct.config.ts",
+        "command": "playwright test -c playwright-ct.config.ts --workers 3",
         "cwd": "{projectRoot}"
       },
       "outputs": ["{projectRoot}/playwright/__snapshots__"],
